@@ -1,0 +1,21 @@
+[{
+    "bigimg": "./img/01baner.jpg",
+    "salmm": "./img/01acetabulum.png",
+    "salmm1": "./img/02acetabulum.png "
+}, {
+
+    "bigimg": "./img/02baner.jpg",
+    "salmm": "./img/01shirt.png",
+    "salmm1": "./img/02shirt.png "
+}, {
+
+    "bigimg": "./img/03baner.jpg",
+    "salmm": "./img/01spongia.png",
+    "salmm1": "./img/02spongia.png"
+}, {
+
+    "bigimg": "./img/04baner.jpg",
+    "salmm": "./img/01stockings.png",
+    "salmm1": "./img/02stockings.png"
+
+}]

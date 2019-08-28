@@ -1,0 +1,326 @@
+html,
+body {
+    height: 100%;
+    background: #f6f6f6;
+}
+
+.winp {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.head {
+    width: 100%;
+
+    .head-con {
+        height: 87px;
+        background: #f6f6f6ff;
+        padding-top: 27px;
+        box-sizing: border-box;
+
+        .logo {
+            float: left;
+            line-height: 87px;
+        }
+
+        .login {
+            float: right;
+            margin: 35px 0 0;
+            font-size: 12px;
+
+            a {
+                color: #58a;
+            }
+        }
+    }
+}
+
+.nav {
+    width: 100%;
+    height: 650px;
+    // background: #58a;
+
+    .nav-con {
+        background: #fff;
+        padding: 40px 60px;
+        width: 860px;
+        height: 560px;
+
+        .login-box {
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 480px;
+            float: left;
+            padding-left: 20px;
+            background: #fff;
+            margin-left: 40px;
+            position: relative;
+            box-sizing: border-box;
+
+            .fome-cnton {
+                position: absolute;
+                width: 258px;
+                height: 360px;
+                background: #fff;
+                top: 30px;
+
+                .fome-list {
+                    box-sizing: border-box;
+                    width: 258px;
+                    height: 250px;
+                    background: #fff;
+                    text-align: center;
+
+
+                    .username-and-password {
+                        position: relative;
+
+                        .user_name {
+                            background: url(../img/login_user.png) no-repeat 0 0;
+                            width: 12px;
+                            height: 12px;
+                            position: absolute;
+                            top: 30px;
+                            left: 15px;
+                        }
+
+                        .user_keywords {
+                            background: url(../img/login_user.png) no-repeat -17px 0;
+                            width: 12px;
+                            height: 12px;
+                            position: absolute;
+                            top: 90px;
+                            left: 15px;
+                        }
+
+                        .inpt {
+                            margin: 30px 0;
+                            color: #999;
+                            width: 183px;
+                            border: 1px solid #c4c4c4;
+                            vertical-align: middle;
+                            height: 18px;
+                            padding: 10px;
+                            padding-left: 45px;
+                            line-height: 18px;
+                            margin: 15px 0 5px
+                        }
+
+
+
+                    }
+
+
+                    .link-login {
+                        padding: 40px;
+
+                        a {
+                            display: block;
+                            height: 100px;
+                            width: 200px;
+                            background: #fff;
+
+                            img {
+                                margin-right: 90px;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+
+        .form_reg {
+            width: 430px;
+            height: 426px;
+            background: #fff;
+            float: left;
+
+            .item {
+                padding: 15px 0 15px 74px;
+                position: relative;
+                width: 356px;
+                zoom: 1;
+
+
+                label {
+                    margin-left: -74px;
+                    text-align: right;
+                    float: left;
+                    width: 74px;
+                    height: 36px;
+                    font: 14px/36px "宋体";
+                    display: inline;
+                    color: #333;
+                }
+
+                .itext1 {
+                    color: #999;
+                    width: 290px;
+                    height: 30px;
+                    text-indent: 5px;
+                    border: 1px solid #d2d2d2;
+                    padding: 2px 3px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                }
+
+                #validCode {
+                    color: #999;
+                    width: 128px;
+                    height: 30px;
+                    text-indent: 5px;
+                    border: 1px solid #d2d2d2;
+                    padding: 2px 3px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                }
+
+                #vcode_box {
+
+                    a {
+                        font-size: 12px;
+                        color: #ccc;
+                        border: 1px solid #e9e9e9;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        width: 155px;
+                        height: 34px;
+                        background: #f6f6f6;
+                        display: inline-block;
+                        vertical-align: middle;
+                        line-height: 34px;
+                        text-align: center;
+                        margin-left: 10px;
+                    }
+                }
+
+                #reg_submit {
+
+                    border-top: 1px solid #e93a3a;
+                    border-bottom: 1px solid #e93a3a;
+                    display: inline-block;
+                    text-align: center;
+                    margin-top: 1px;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 14px;
+                        border-left: 1px solid #e93a3a;
+                        border-right: 1px solid #e93a3a;
+                        margin: 0 -1px;
+                        display: block;
+                        font-style: normal;
+                        color: #fff;
+                        background: #ff3b37;
+                        text-decoration: none;
+                        height: 30px;
+                        line-height: 30px;
+                        position: relative;
+                        padding: 0 20px;
+                    }
+                }
+
+                .row1 {
+                    line-height: 26px;
+
+                    .avt {
+                        display: block;
+                    }
+
+                    em {
+                        display: none;
+                        width: 26px;
+                        height: 26px;
+                        float: left;
+                        background: url(../img/ico1.png) 0 0 no-repeat;
+                        margin-right: 4px;
+                        position: absolute;
+                        top: -32px;
+                        left: 299px;
+                    }
+                }
+
+                .msg_box {
+                    font-size: 12px;
+                    color: #c33;
+                    display: inline-block;
+                    width: 300px;
+                    height: 30px;
+                    position: absolute;
+                    top: 50px;
+                    left: 74px;
+                }
+
+
+            }
+
+
+
+            .http {
+                font-size: 12px;
+                margin-left: 30px;
+
+                a {
+                    color: #000;
+                }
+            }
+
+        }
+
+        .verification_code {
+            width: 300px;
+            height: 36px;
+            background: #000;
+            margin-left: 76px;
+
+        }
+
+
+
+    }
+
+    .img_reg {
+        width: 403px;
+        height: 206px;
+        float: left;
+        background: #ccc;
+    }
+}
+
+
+.foot {
+    width: 100%;
+    height: 81px;
+    background: #f6f6f6;
+    text-align: center;
+    overflow: hidden;
+
+    .area {
+        margin-top: 20px;
+        font-size: 12px;
+
+        .foot-img {
+            width: 266px;
+            height: 28px;
+            background: #fff;
+            margin: 0 auto;
+
+            #foot-img-1 {
+                height: 26px;
+                width: 70px;
+                display: block;
+                // background: #58a;
+            }
+        }
+
+
+
+        a {
+            color: #000;
+        }
+    }
+}

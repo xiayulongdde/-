@@ -1,0 +1,198 @@
+html,
+body {
+    height: 100%;
+}
+
+
+#sidebar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 34px;
+    background-color: #000;
+    height: 100%;
+    min-height: 594px;
+    z-index: 10001;
+    visibility: visible;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "microsoft yahei";
+    color: #fff;
+
+    .side-tab {
+        width: 34px;
+        height: 133px;
+
+        .cart-icon {
+            margin: 14px auto 0;
+            width: 38px;
+            height: 120px;
+            background: url(../img/car.png) no-repeat;
+
+        }
+
+        .tab-text {
+            font-size: 12px;
+            text-align: center;
+            display: block;
+            left: 7px;
+            top: 40px;
+            width: 20px;
+            height: 50px;
+            line-height: 16px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            font-family: "微软雅黑";
+        }
+
+        .tab-sup {
+
+            display: block;
+            top: 100px;
+            right: 5px;
+            text-align: center;
+            position: absolute;
+
+            .tab-sup-bg {
+
+                .tab-sup-bd {
+                    width: 20px;
+                    height: 20px;
+                    font-family: "微软雅黑";
+                    line-height: 19px;
+                    font-size: 12px;
+                    display: inline-block;
+                    margin-right: 2px;
+                    background: #e93a3a;
+                    border-radius: 15px;
+
+                }
+
+            }
+        }
+
+    }
+
+    .cart-icon:hover {
+        background-color: #C00;
+    }
+
+    // 订单
+    .indent {
+        width: 34px;
+        height: 42px;
+        // background: red;
+        position: absolute;
+        top: 140px;
+        background: url(../img/side_golds.png) no-repeat 6px -188px;
+        text-align: center;
+
+
+        .order {
+            width: 120px;
+            height: 42px;
+            position: absolute;
+            right: 34px;
+            background: #C00;
+            line-height: 40px;
+            display: none;
+            z-index: 3;
+        }
+    }
+
+
+    .indent:hover .order {
+        display: block;
+    }
+
+    .indent:hover {
+        background-color: #C00;
+        text-decoration: underline;
+    }
+
+    // 优惠卷
+    .special {
+        width: 34px;
+        height: 42px;
+        background: #58a;
+        position: absolute;
+        top: 180px;
+        background: url(../img/side_golds.png) no-repeat 3px -264px;
+        text-align: center;
+        line-height: 42px;
+
+
+        .special_li {
+            width: 120px;
+            height: 42px;
+            position: absolute;
+            right: 34px;
+            background: #C00;
+            line-height: 40px;
+            display: none;
+            z-index: 3;
+            top: 0px;
+        }
+
+
+    }
+
+    .special:hover .special_li {
+        display: block;
+    }
+
+    .special:hover {
+        background-color: #C00;
+        text-decoration: underline;
+    }
+
+    // 收藏
+    .favorite {
+        width: 34px;
+        height: 42px;
+        background: #58bc58;
+        position: absolute;
+        top: 228px;
+        background: url(../img/side_golds.png) no-repeat 4px -232px;
+        text-align: center;
+
+
+        .favorite_li {
+            width: 120px;
+            height: 42px;
+            position: absolute;
+            right: 34px;
+            background: #C00;
+            line-height: 40px;
+            display: none;
+            z-index: 3;
+            top: 0px;
+        }
+
+    }
+
+    .favorite:hover .favorite_li {
+        display: block;
+    }
+
+    .favorite:hover {
+        background-color: #C00;
+        text-decoration: underline;
+    }
+
+    //回到顶部
+    .back_top {
+        position: absolute;
+        bottom: 0px;
+        width: 34px;
+        height: 25px;
+        background: #c00;
+        text-align: center;
+    }
+
+
+
+}

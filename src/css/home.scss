@@ -1,0 +1,331 @@
+html,
+body {
+    height: 100%;
+}
+
+.winp {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav_conrt {
+    height: 304px;
+    // background: #58a;
+
+
+    // 选项
+    .tab_Conter {
+        // width: 420px;
+        height: 304px;
+        position: relative;
+        float: left;
+
+        //选项卡
+        .tab_menu_bar {
+            width: 137px;
+            height: 304px;
+            background: #ffff;
+            float: left;
+
+            .tab_big {
+                height: 304px;
+                text-align: center;
+                padding: 0 5px;
+                border-left: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+
+                .tab_list_li {
+                    border-bottom: 1px solid #ccc;
+                    width: 120px;
+                    height: 26px;
+                    font-size: 15px;
+                    padding: 2px 0;
+
+                    a {
+                        color: #555;
+                        margin: 0 5px;
+                    }
+                }
+
+                .tab_list_li:hover {
+                    background: #C00;
+                }
+
+                .tab_list_li:hover a {
+                    color: #ffff;
+                }
+
+                .tab_list_last {
+                    position: relative;
+                    width: 130px;
+                    font-size: 12px;
+                    line-height: 29px;
+                    height: 29px;
+
+                    a {
+
+                        line-height: 12px;
+                        color: #555;
+                    }
+
+                }
+
+                .tab_list_last:hover a {
+                    color: #C00;
+                }
+
+
+
+                .tab_list_last_botton {
+                    border-top: 1px solid #555;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .tab_body {
+            display: none;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: 10px 6px;
+            width: 380px;
+            height: 304px;
+            background: #ffff;
+            position: absolute;
+            top: 0;
+            left: 137px;
+            z-index: 2;
+
+            .tab_bady_list {
+                box-sizing: border-box;
+                padding: 8px;
+                width: 197px;
+                height: 290px;
+                background: #ffff;
+                margin-right: 20px;
+                float: left;
+
+
+                .tab_bady_tile {
+                    color: #C00;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: left;
+                    font-family: "microsoft yahei";
+                    font-size: 14px;
+                    font-weight: 400;
+                    border-bottom: 1px solid #e5e5e5;
+                }
+
+                .tab_bady_ul {
+                    width: 180px;
+                    height: 105px;
+                    overflow: hidden;
+                    background: #ffff;
+
+
+                    li {
+                        float: left;
+                        width: auto;
+                        height: 12px;
+                        margin: 3px 14px 6px 0;
+                        border: 0;
+                        line-height: 14px;
+                        font-family: "microsoft yahei";
+                        font-size: 12px;
+                        background-color: #fff;
+
+                        a {
+                            color: #555;
+                        }
+
+                        a:hover {
+                            color: #C00;
+                        }
+                    }
+                }
+
+            }
+
+
+
+            .tab_body_img {
+                width: 140px;
+                height: 270px;
+                background-color: #fff;
+                float: left;
+
+                .tab_body_img-cont,
+                .tab_body_img-top,
+                .tab_body_img-botton {
+                    width: 140px;
+                    height: 93px;
+
+                    .img-con,
+                    .img-top {
+                        margin: 4px 0;
+                        width: 140px;
+                        height: 90px;
+                    }
+
+                    .img-cont {
+                        margin: 4px 0;
+                        width: 140px;
+                        height: 90px;
+                    }
+                }
+
+
+            }
+        }
+
+        .avten {
+            display: block;
+        }
+
+    }
+
+    //轮播图
+    .baenr {
+        width: 951px;
+        height: 304px;
+        background: #ccc;
+        float: left;
+        position: relative;
+
+        .baenr_button {
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            top: 95%;
+            z-index: 3;
+            text-align: center;
+
+            span {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background: #efefef;
+                margin: 0 10px;
+                border-radius: 20px;
+
+                em {
+                    opacity: 0;
+                }
+            }
+
+
+            .avteng {
+                background: #C00;
+            }
+        }
+
+        .slider_main {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+
+            .baenr_li {
+                display: none;
+                width: 951px;
+                height: 304px;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+
+                .smalimg {
+                    width: 137px;
+                    margin-right: 0;
+                    height: 137px;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+
+                    .smalimg-last {
+                        width: 162px;
+                        height: 150px;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 140px;
+                        right: 0px;
+
+                    }
+
+
+                    .smalimg_img {
+                        width: 137px;
+                        height: 137px;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .smalimg_img-last {
+                        width: 137px;
+                        height: 137px;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 163px;
+                        right: 20px;
+
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                }
+
+            }
+
+            .naenr_li_img {
+                width: 951px;
+                height: 304px;
+            }
+        }
+
+    }
+
+    .promise {
+        float: left;
+        width: 110px;
+        height: 304px;
+        background: #fff;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 8px;
+        box-sizing: border-box;
+
+        .promise_img {
+            margin-right: 40px;
+            width: 100px;
+            height: 35%;
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-left: 32px;
+            }
+
+            span {
+                margin-left: 25px;
+                display: inline-block;
+                width: 150px;
+                font-size: 12px;
+                color: #C00;
+            }
+        }
+
+    }
+}

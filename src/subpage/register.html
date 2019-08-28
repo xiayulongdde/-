@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/drag.css">
+    <link rel="stylesheet" href="../css/layer-animate.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="head">
+        <div class="winp head-con">
+            <div class="logo">
+                <img src="../img/logo20172x.jpg" alt="标志" class="logo">
+            </div>
+            <span class="login">
+                已经有团八百或折八百账号了？
+                <a href="lgoin.html" target="_parent">去登陆</a>
+            </span>
+        </div>
+    </header>
+    <!-- 内容 -->
+    <nav class="nav">
+        <div class="winp nav-con">
+            <div class="form_reg">
+                <div class="item">
+                    <label>手机号:</label>
+                    <input type="text" id="pemail" class="itext1" value="手机号码">
+                    <div class="msg_box row1">
+                        <em></em>
+                        <span class="msg"></span></div>
+                </div>
+                <div class="item">
+                    <label>密码：</label>
+                    <input type="password" id="password" class="itext1">
+                    <div class="msg_box row1"><em></em><span class="msg"></span></div>
+                </div>
+                <div class="item ">
+                    <label>确认密码：</label>
+                    <input type="password" id="password2" class="itext1">
+                    <div class="msg_box row1"><em></em><span class="msg"></span></div>
+                </div>
+                <div id="drag">
+                </div>
+                <div class="item">
+                    <label>验证码：</label>
+                    <input type="text" id="validCode" class="itext1">
+                    <span id="vcode_box"><a href="###">免费获取手机验证码</a></span>
+                    <div class="msg_box "><em></em><span class="msg"></span></div>
+                    <a href="javascript:void(0);" id="refresh_vcode"></a>
+                </div>
+                <div class="http">
+                    <input checked="checked" id="inputacc" type="checkbox">
+                    我已阅读并接受折800的<a target="_blank" href="http://help.zhe800.com/detail/82">《用户服务协议》</a>
+                </div>
+                <div class="item">
+                    <a href="###" class="ajax" id="reg_submit"><i>同意协议并注册</i></a>
+                </div>
+            </div>
+            <div class="img_reg">
+                <img src="http://d1.tuanimg.com/upload/dynamic_banner/image/403/130f4b3f21b106ab11a8c5b43eeb5cd4.jpg"
+                    alt="">
+            </div>
+        </div>
+
+    </nav>
+    <!-- 尾部 -->
+    <footer class="foot">
+        <div class="winp area">
+            <a target="_blank" href="http://www.miibeian.gov.cn/" rel="nofollow">京ICP证120075号</a>&nbsp;京ICP备10051110号-5
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502025623" target="_blank"
+                rel="nofollow">京公网安备11010502025623</a> 食品流通许可证SP1101051510352397
+            Copyright©2011-2019 版权所有 ZHE800.COM <br>
+
+        </div>
+    </footer>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/drag.js"></script>
+    <script type="text/javascript">
+        $('#drag').drag();
+    </script>
+    <script src="../js/method.js"></script>
+    <script src="../js/register.js"></script>
+
+</body>
+
+</html>
