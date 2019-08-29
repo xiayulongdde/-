@@ -11,6 +11,7 @@
     <script src="./js/jquery-1.11.3.min.js"></script>
     <script src="./js/home.js"></script>
     <script src="./js/baner.js"></script>
+    <script src="./js/commodity.js"></script>
 </head>
 
 <body>
@@ -74,7 +75,6 @@
                 <div class='baenr_button'></div>
                 <ul class="slider_main">
                 </ul>
-
             </div>
             <!-- 侧边图片 -->
             <div class="promise">
@@ -91,46 +91,83 @@
                     <span>想买你就砍！</span>
                 </div>
             </div>
-            <!-- 中间三项-->
-            <div class="nav_list">
-                <div class="nav_list_tilet">
-                    <h2></h2>
-                    <span></span>
-                    <div class="nav_list_box">
-                        <ul class="nav_list_ul">
-                            <li class="nav_list_li">女装</li>
-                            <li class="nav_list_li">家纺</li>
-                            <li class="nav_list_li">母婴</li>
-                            <li class="nav_list_li">内衣</li>
-                            <li class="nav_list_li">男装</li>
-                            <li class="nav_list_li">箱包</li>
-                            <li class="nav_list_li">居家</li>
-                            <li class="nav_list_li">全部品牌</li>
 
-                        </ul>
-                    </div>
+    </nav>
+    <!-- 商品介绍 -->
+    <div class="nav_list">
+        <div class="nav_list_box winp">
+            <div class="nav_list_tilet">
+                <h2 class="nav_list_h2">
+                    <img src="./img/index.png" alt="">
+                </h2>
+                <span class="nav_list_span">
+                    <i></i>今日在线品牌1257个
+                </span>
+                <div class="dependence">
+                    <ul class="nav_list_ul">
+                        <li class="nav_list_li">女装</li>
+                        <li class="nav_list_li">家纺</li>
+                        <li class="nav_list_li">母婴</li>
+                        <li class="nav_list_li">内衣</li>
+                        <li class="nav_list_li">男装</li>
+                        <li class="nav_list_li">箱包</li>
+                        <li class="nav_list_li">居家</li>
+                        <li class="nav_list_li">全部品牌</li>
+                    </ul>
                 </div>
-                <ul class="nav_list_ul">
-                    <li>
-                        <a href=""></a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href=""></a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href=""></a>
-                        <div></div>
-                    </li>
+            </div>
+            <ul class="therephotograph">
+                <li class="therephotograph_img">
+                    <a href="">
+                        <img src="./img/nav03.jpg" alt="">
+                    </a>
+                    <span class="therephotograph_span">【ABCKICS】&nbsp;全场1件4折</span>
+                </li>
+                <li class="therephotograph_img cont">
+                    <a href="">
+                        <img src="./img/nav02.jpg" alt="">
+                    </a>
+                    <span class="therephotograph_span">【香莉思】&nbsp;全场1件4折</span>
+                </li>
+                <li class="therephotograph_img">
+                    <a href="">
+                        <img src="./img/nav01.jpg" alt="">
+                    </a>
+                    <span class="therephotograph_span">【才子男装】&nbsp;全场1件4折</span>
+                </li>
+            </ul>
+            <div class="merchant">
+                <!-- 商品介绍 -->
+                <ul class="merchant_ul">
                 </ul>
             </div>
-
         </div>
-    </nav>
+    </div>
+    </div>
+    </div>
+    <!-- 商品切换 -->
+
+
+
     <!-- 底部 -->
     <footer id="footer"></footer>
 
+    <script>
+        var img = $("li .dealCon img")
+        var text = $(" li .dealCon .stock  .stockWord ")
+        var price = $("li .dealInfo .price ")
+        var introduce = $(".title_new  .word")
+        var arr = [];
+        for (let i = 0; i < 115; i++) {
+            arr[i] = {
+                src: img[i].src,
+                text: text[i].innerHTML,
+                price: price[i].innerHTML,
+                introduce: introduce[i].innerText
+            }
+
+        }
+    </script>
 </body>
 
 </html>
