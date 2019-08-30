@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图插件版</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.swiper-wrapper {
+				width: 800px;
+				height: 350px;
+			}
+			
+			.swiper-slide {
+				width: 800px;
+				height: 350px;
+				font-size: 50px;
+				line-height: 350px;
+				text-align: center;
+			}
+			.swiper-pagination-bullet{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+			}
+			.swiper-pagination-bullet-active{
+				background: orangered;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container" id="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: lavender;">1</div>
+				<div class="swiper-slide" style="background: lavenderblush;">2</div>
+				<div class="swiper-slide" style="background: lawngreen;">3</div>
+				<div class="swiper-slide" style="background: lemonchiffon;">4</div>
+				<div class="swiper-slide" style="background: lightcoral;">5</div>
+			</div>
+			<!--按钮-->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+			<!--分页-->
+			<div class="swiper-pagination"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+			pagination: {
+				el: '.swiper-pagination',
+			},
+		});
+	</script>
+
+</html>

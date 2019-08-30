@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>04滚动动轮播图</title>
+	<style>
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.banner img {
+			display: block;
+		}
+
+		.banner {
+			position: relative;
+			width: 810px;
+			height: 320px;
+			/* overflow: hidden; */
+		}
+
+		.banner ul {
+			position: absolute;
+			overflow: hidden;
+		}
+
+		.banner ul li {
+			float: left;
+		}
+
+		.banner .page {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			padding: 10px;
+		}
+
+		.banner .page span {
+			display: inline-block;
+			margin: 0 5px;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			background-color: rgba(0, 0, 0, .6);
+			text-align: center;
+			color: #fff;
+			border-radius: 50%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		}
+
+		.banner .page span.active {
+			background-color: rgba(255, 0, 0, .8)
+		}
+
+		.banner>span {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+			padding: 50px 16px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #fff;
+		}
+
+		.banner .btn-next {
+			left: auto;
+			right: 0;
+		}
+
+		.banner>span:hover {
+			background-color: rgba(255, 0, 0, 0.8)
+		}
+
+		.banner:hover>span {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="banner">
+		<ul>
+			<li><img src="img/001.jpg"></li>
+			<li><img src="img/002.jpg"></li>
+			<li><img src="img/003.jpg"></li>
+			<li><img src="img/004.jpg"></li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	(function () {
+
+		//面试题：写一个轮播图
+
+		//获取第一张复制到末尾作为备用
+		$('.banner ul').append($('.banner ul li:first').clone(true));
+		$('.banner ul').outerWidth($('.banner ul li').outerWidth() * $('.banner ul li').length);
+		let now = 0;//可视区那张的下标
+		let timer = null;
+		let iw = $('.banner ul li').outerWidth();
+
+		timer = setInterval(next, 2000);//图片的间隔时间
+
+		function next() {
+			now++;
+			tab();
+		}
+
+		function prev() {
+			now--;
+			tab();
+		}
+
+		function tab() {
+			//核心代码
+			if (now > $('.banner ul li').length - 1) {
+				$('.banner ul').css('left', 0);
+				now = 1;
+			} else if (now < 0) {
+				$('.banner ul').css('left', 0);
+			}
+			$('.banner ul').animate({ 'left': -now * iw }, 1000);
+
+			//焦点跟随
+			
+		}
+
+		//鼠标移入
+		$('.banner').hover(() => {
+			clearInterval(timer);
+		}, () => {
+			clearInterval(timer);
+			timer = setInterval(next, 2000);//图片的间隔时间
+		});
+
+
+	})();
+</script>
+
+</html>

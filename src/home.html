@@ -93,7 +93,7 @@
             </div>
 
     </nav>
-    <!-- 商品介绍 -->
+    <!-- 三相之力 -->
     <div class="nav_list">
         <div class="nav_list_box winp">
             <div class="nav_list_tilet">
@@ -136,37 +136,85 @@
                     <span class="therephotograph_span">【才子男装】&nbsp;全场1件4折</span>
                 </li>
             </ul>
+            <!-- 商品介绍 -->
             <div class="merchant">
-                <!-- 商品介绍 -->
-                <ul class="merchant_ul">
+                <ul class="merchant_ul" e>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- 商品列表 -->
+    <div class="catalogue">
+        <div class="catalogue-contt  winp">
+            <div class="purchase">
+                <h3 class="purchase_img">
+                    <img src="./img/tilie.png" alt="">
+                </h3>
+                <span class="purchase_span">
+                    <i></i>精选爆款，限时限量
+                </span>
+                <ul class="topurchase">
+                    <li>10:00开抢</li>
+                    <li>12:00开抢</li>
+                    <li>14:00开抢</li>
+                    <li>16:00开抢</li>
+                    <li>18:00开抢</li>
+                    <li>20:00开抢</li>
+                    <li>22:00开抢</li>
+                    <li>明日预告</li>
+                </ul>
+            </div>
+            <div class="nxte_pvte">
+                <span class="lookup">
+                    <img src="./img/lookup.jpg" alt="">
+                </span>
+                <span class="down">
+                    <img src="./img/down.jpg" alt="">
+                </span>
+            </div>
+            <div class="cataloguepar">
+                <ul class="catalogue_ul">
+                </ul>
+            </div>
+        </div>
     </div>
+    <!--四件商品 -->
+    <div class="commodity-hou">
+        <div class="commodity-hou__box winp ">
+            <div class="commodity-tileit">
+                <h2 class="commodity-tileit_h2">
+                    <img src="./img/hot.png" alt="">
+                </h2>
+                <span class="commodity-tileit_span">
+                    <em></em><i>即将下架</i><a href="">人气爆款</a><i>每日更新</i>
+                </span>
+            </div>
+            <div class="commodity-hou_img">
+                <ul class="commodity-hou_img_list">
+                    <li class="commodity-hou_li">
+                        <img src="./img/01list.jpg" alt="">
+                    </li>
+                    <li class="commodity-hou_li">
+                        <img src="./img/02list.jpg" alt="">
+                    </li>
+                    <li class="commodity-hou_li">
+                        <img src="./img/03list.jpg" alt="">
+                    </li>
+                    <li class="commodity-hou_li">
+                        <img src="./img/04list.png" alt="">
+                    </li>
+                    <li class="commodity-hou_li">
+                        <img src="./img/05list.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <!-- 商品切换 -->
-
-
-
     <!-- 底部 -->
     <footer id="footer"></footer>
 
     <script>
-        var img = $("li .dealCon img")
-        var text = $(" li .dealCon .stock  .stockWord ")
-        var price = $("li .dealInfo .price ")
-        var introduce = $(".title_new  .word")
-        var arr = [];
-        for (let i = 0; i < 115; i++) {
-            arr[i] = {
-                src: img[i].src,
-                text: text[i].innerHTML,
-                price: price[i].innerHTML,
-                introduce: introduce[i].innerText
-            }
-
-        }
+        let sss = $(".deal .con .goods_img")
     </script>
 </body>
 

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 100%;
+            background: #eee;
+        }
+        
+        .item {
+            width: 180px;
+            /*height: 200px;*/
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fff;
+            position: absolute;
+        }
+        
+        .item-img {
+            width: 180px;
+            height: 200px;
+        }
+        
+        .item-price {
+            color: red;
+            font-size: 25px;
+        }
+        
+        .item-name {
+            color: #888;
+        }
+        
+        .item-press {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .item-discuss {
+            font-size: 14px;
+            color: #2f6fad;
+        }
+        
+        .item-cart {
+            height: 33px;
+            line-height: 33px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+        
+        .item-cart img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 5px;
+        }
+        
+        .item-cart span {
+            position: absolute;
+            left: 40px;
+            height: 30px;
+            line-height: 30px;
+            width: 100px;
+            display: inline-block;
+            background: #fff;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+        
+        .item-cart:hover {
+            border: 1px solid #ff0088;
+            color: red;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .cart-list {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            width: 20px;
+            border: 2px solid #000;
+            text-align: center
+        }
+        
+        .cart-list span {
+            border-radius: 10px;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background: red;
+            color: #fff;
+            display: inline-block
+        }
+    </style>
+    <script src="src/jquery-3.4.1.js"></script>
+    <script src="src/jquery.tools.js"></script>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="cart-list">
+        <h4>购物车</h4>
+        <span id="catShow">0</span>
+    </div>
+    <script>
+        $(function() {
+
+            let itemData;
+            let oBox = $(".box");
+            let margin = 10;
+
+            /* 当页面加载完 发请求给服务器获取数据 */
+            $.ajax({
+                type: "get",
+                url: "../server/getListData.php",
+                dataType: "json",
+                success: function(data) {
+                    // console.log(data);
+                    itemData = data;
+                    /*创建标签并且插入到页面中*/
+                    data.forEach(function(item, i) {
+                        console.log(item.src);
+                        let product = `<div class="item" data-index=${i}>
+                       <img class="item-img" src="img/${item.src}" alt="">
+                       <div><span class="item-price">￥ ${item.price}</span></div>
+                       <div class="item-name">${item.name}</div>
+                       <div class="item-discuss">${item.discuss}</div>
+                       <div class="item-press">出版社:${item.press}</div>
+                       <div class="item-cart">
+                         <img src="img/cart.png" alt="">
+                         <span>| 添加到购物车</span>
+                       </div>
+                     </div>`;
+                        oBox.append(product);
+                    })
+
+                    console.log(oBox[0]);
+
+                    /*设置标签的位置信息(left top)*/
+                    computedOffset();
+                }
+            });
+
+
+            $(window).resize(computedOffset);
+
+            function computedOffset() {
+                let oItem = $(".item");
+                let itemWidth = oItem.width() + 20;
+
+                /*计算没行可以显示多少列*/
+                let len = Math.floor(($(window).width() - margin) / (itemWidth + margin));
+                let itemList = [];
+
+                oItem.each(function(i, ele) {
+                    /*获取当前标签的高度*/
+                    let itemHeight = $(this).height() + 20;
+                    let currentRow = Math.floor(i / len); /*当前第几行*/
+                    let currentCol = i % len; /*当前第几列*/
+
+                    /*计算当前标签的left值和top值*/
+                    let offsetLeft = margin + currentCol * (itemWidth + margin);
+                    let offsetTop = margin + currentRow * (itemHeight + margin);
+
+                    if (currentRow == 0) {
+                        itemList.push({
+                            left: offsetLeft,
+                            offsetTop: margin + itemHeight
+                        });
+                        $(this).stop(true).animate({
+                            left: offsetLeft,
+                            top: offsetTop
+                        }, 20);
+                    } else {
+                        let minIndex = $.getMinIndexWithArr(itemList);
+
+                        let left = itemList[minIndex].left;
+                        let top = itemList[minIndex].offsetTop + margin;
+
+                        $(this).stop(true).animate({
+                            left: left,
+                            top: top
+                        }, 20);
+
+                        /*最核心步骤：更新数据*/
+                        itemList[minIndex].offsetTop = top + itemHeight;
+                    }
+                })
+            }
+
+            /* 加入购物车的功能 */
+            $(".box").on("click", ".item-cart", function() {
+                // console.log(itemData);
+                var index = $(this).parent().data("index");
+                var goodid = itemData[index].goodid;
+                var price = itemData[index].price;
+                console.log(goodid);
+
+                $.ajax({
+                    type: "get",
+                    url: "../server/addCart.php",
+                    data: `goodid=${goodid}&price=${price}`,
+                    dataType: "json",
+                    success: function(response) {
+                        // console.log(response);
+                        var text = response["totalRow"];
+                        $("#catShow").html(text)
+
+                    }
+                });
+
+            })
+
+            /* 给购物车按钮添加点击事件 */
+            $(".cart-list").click(function() {
+                window.open("./cart.html")
+            })
+        })
+    </script>
+</body>
+
+</html>

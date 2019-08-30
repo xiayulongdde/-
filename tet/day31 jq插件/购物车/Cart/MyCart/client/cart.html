@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none
+        }
+        
+        .cat-box {
+            width: 900px;
+            margin: 50px auto;
+            height: 300px;
+            /* background: #ccc; */
+        }
+        
+        thead tr th {
+            width: 300px;
+            text-align: center;
+            background: #bbb
+            /* border: 1px solid #000; */
+        }
+        
+        img {
+            height: 50px;
+            /* margin-left: 50px */
+        }
+        
+        tbody tr {
+            background: #eee;
+            height: 100px;
+            border: 1px solid #000;
+            width: 100%;
+        }
+        
+        .num {
+            width: 50px;
+            margin-left: -6px;
+            text-align: center
+        }
+        
+        .btnA,
+        .btnB {
+            width: 21px;
+            height: 21px;
+        }
+        
+        #btnB {
+            margin-left: -6px;
+        }
+        
+        tbody tr td {
+            text-align: center;
+        }
+        
+        .footer {
+            height: 30px;
+            line-height: 30px;
+            position: relative;
+            background: #ccc;
+        }
+        
+        .footer .left {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            /* background: #892 */
+        }
+        
+        .right {
+            /* float: right; */
+            width: 200px;
+            height: 30px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            /* background: #195; */
+            text-align: center
+        }
+    </style>
+    <script src="src/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+
+    <div class="cat-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>图片</th>
+                    <th>商品</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td><input type="checkbox"></td>
+                    <td><img src="./Snip20190807_1.png" alt=""></td>
+                    <td>贵州茅台</td>
+                    <td>￥ 1829.00</td>
+                    <td><button class="btnA">-</button> <input type="text" class="num"> <button class="btnB">+</button></td>
+                    <td>￥ 1829.00</td>
+                    <td><a>删除</a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><img src="./Snip20190807_1.png" alt=""></td>
+                    <td>贵州茅台</td>
+                    <td>￥ 1829.00</td>
+                    <td><button class="btnA">-</button> <input type="text" class="num"> <button class="btnB">+</button></td>
+                    <td>￥ 1829.00</td>
+                    <td><a>删除</a></td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div class="footer">
+            <span class="left"><input type="checkbox" id="allSelector" checked></span> 全选
+            <span class="right">总计</span>
+        </div>
+    </div>
+
+    <script>
+        var targetData;
+        /* 获取数据库中所有购物车相关的信息 */
+        getCatInfo();
+
+        function getCatInfo() {
+            $.ajax({
+                type: "get",
+                url: "../server/getCatData.php",
+                dataType: "json",
+                success: function(data) {
+                    targetData = data;
+                    /* 根据数据来渲染页面 */
+                    var res = data.map(function(ele) {
+                        var html = `
+                            <tr data-index=${ele.id}>
+                                <td><input class="checkbox-class" type="checkbox" ${ele.isActive==1 ? "checked" : "" }></td>
+                                <td><img src=${"./img/" + ele.src} alt=""></td>
+                                <td>${ele.name}</td>
+                                <td>￥ ${ele.price}</td>
+                                <td><button class="btnA">-</button> <input type="text" class="num" value=${ele.num}> <button
+                                        class="btnB">+</button></td>
+                                <td class="totalPrice">￥ ${ele.total} </td>
+                                <td><a class="del">删除</a></td>
+                            </tr>
+                            `;
+                        return html;
+                    }).join("");
+
+                    $("tbody").html(res);
+
+                    // console.log(targetData);
+                    computedTotalPrice();
+
+                }
+            });
+        }
+
+        function computedTotalPrice() {
+            var res = 0;
+            targetData.forEach(element => {
+                if (element.isActive == 1) {
+                    res += element.total * 1;
+                }
+            });
+            console.log(res);
+            $(".right").html("总计：" + res);
+
+        }
+
+        $("#allSelector").click(function() {
+            $(".checkbox-class").prop("checked", $(this).is(":checked"))
+        })
+
+        /* 给删除添加点击事件 */
+        $("tbody").on("click", ".del", function() {
+            $.ajax({
+                type: "get",
+                url: "../server/removeCart.php",
+                data: "goodid=" + 7,
+                success: function(response) {}
+            });
+        })
+    </script>
+</body>
+
+</html>
