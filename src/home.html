@@ -8,6 +8,9 @@
     <title>首页</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <script src="./js/jquery-1.11.3.min.js"></script>
     <script src="./js/home.js"></script>
     <script src="./js/baner.js"></script>
@@ -15,10 +18,20 @@
 </head>
 
 <body>
-    <!-- 头bu -->
-    <header id="haader"></header>
+    <!-- 头部 -->
+    <header id="haader">
+        <script>
+            $("#haader").load("./subpage/head.html");
+        </script>
+    </header>
     <!-- 吸顶效果 -->
     <div></div>
+    <!-- 侧面变栏 -->
+    <div id="The_side_bar">
+        <script>
+            $("#The_side_bar").load("./subpage/sidebar.html");
+        </script>
+    </div>
     <!-- 首页内容 -->
     <nav id="nav">
         <div class="nav_conrt  winp ">
@@ -178,7 +191,7 @@
             </div>
         </div>
     </div>
-    <!--四件商品 -->
+    <!--五件商品 -->
     <div class="commodity-hou">
         <div class="commodity-hou__box winp ">
             <div class="commodity-tileit">
@@ -210,12 +223,46 @@
             </div>
         </div>
     </div>
+    <!-- 底部列表 -->
+    <div class="mian_list">
+        <div class="mian_lis_cnter  winp">
+            <div class="mian_lis_cnter_tile">
+                <h2 class="mian_lis_cnter_h2">
+                    <img src="./img/update.png" alt="">
+                </h2>
+                <span class="mian_lis_cnter_sapn">
+                    <em></em>22158款
+                </span>
+                <div class="mian_lis_cnter_tile_ul">
+                    <ul class="mian_box">
+                        <li>默认</li>
+                        <em></em>
+                        <li>男</li>
+                        <em></em>
+                        <li>女</li>
+                        <em></em>
+                        <li>辣妈</li>
+                    </ul>
+                    <div class="rank">
+                        <a href="###">排序</a>
+                        <sapn href="###" class="rank_a">最新</sapn>
+                        <a href="###">最热</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--商品大列表 -->
+    <div class="mian_commit">
+        <div class="mian_commit_list winp">
+        </div>
+    </div>
     <!-- 底部 -->
-    <footer id="footer"></footer>
-
-    <script>
-        let sss = $(".deal .con .goods_img")
-    </script>
+    <footer id="footer">
+        <script>
+            $("#footer").load("./subpage/foot.html");
+        </script>
+    </footer>
 </body>
 
 </html>

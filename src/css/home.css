@@ -527,13 +527,13 @@ body {
 .catalogue .nxte_pvte .lookup {
   position: absolute;
   left: 0;
-  top: 732px;
+  top: 906px;
   z-index: 999;
 }
 
 .catalogue .nxte_pvte .down {
   position: absolute;
-  top: 732px;
+  top: 906px;
   left: 1164px;
   z-index: 999;
 }
@@ -702,6 +702,193 @@ body {
 }
 
 .commodity-hou .commodity-hou_img_list .commodity-hou_li:hover {
+  box-shadow: 0 0 30px 1px #999;
+  border: 0;
+  transition: box-shadow .8s;
+}
+
+.mian_list {
+  width: 100%;
+}
+
+.mian_list .mian_lis_cnter {
+  border-bottom: 1px solid #c00;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile {
+  height: 42px;
+  background: #ffff;
+  position: relative;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_h2 {
+  position: absolute;
+  left: 18px;
+  top: 12px;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_sapn {
+  position: absolute;
+  top: 19px;
+  left: 187px;
+  color: #555;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_sapn em {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #C00;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul {
+  width: 380px;
+  height: 41px;
+  background: #fff;
+  float: right;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .mian_box {
+  float: left;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .mian_box li {
+  float: left;
+  line-height: 46px;
+  margin: 0 5px;
+  font-size: 13px;
+  padding: 0 7px;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .mian_box em {
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  position: absolute;
+  background: #ccc;
+  top: 18px;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .mian_box li:hover {
+  color: #C00;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .rank {
+  margin-left: 8px;
+  width: 130px;
+  height: 44px;
+  float: left;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .rank a {
+  font-size: 13px;
+  color: #555;
+  line-height: 44px;
+  margin: 0 7px;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .rank .rank_a {
+  display: inline-block;
+  background: #C00;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.mian_list .mian_lis_cnter .mian_lis_cnter_tile .mian_lis_cnter_tile_ul .rank a:hover {
+  color: #C00;
+}
+
+.mian_commit {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.mian_commit .mian_commit_list {
+  background: #f2f2f2;
+  height: 8627px;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box {
+  float: left;
+  width: 250px;
+  height: 345px;
+  margin: 0 11px 30px;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_box_img {
+  width: 250px;
+  height: 283px;
+  font-size: 0;
+  display: block;
+  background-color: #fff;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_box_img img {
+  height: 100%;
+  width: 100%;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_bott,
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_tiem {
+  width: 250px;
+  height: 30px;
+  padding: 0 10px;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_bott .mian_commit-text,
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_tiem .mian_commit-text {
+  color: #666;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_bott .mian_commit-are,
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_tiem .mian_commit-are {
+  line-height: 30px;
+  float: right;
+  color: #999;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_bott h2,
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_tiem h2 {
+  font-size: 16px;
+  color: #ec1611;
+  display: inline-block;
+  width: 194px;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_bott p,
+.mian_commit .mian_commit_list .mian_commit_box .mian_commit_tiem p {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  display: inline-block;
+  background: url(//z6.tuanimg.com/v3/src/img/common/big_bg_img_v3.png) no-repeat -493px -64px;
+  font: 12px/14px "microsoft yahei";
+  padding-left: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #999;
+  z-index: 1;
+}
+
+.mian_commit .mian_commit_list .mian_commit_box:hover {
   box-shadow: 0 0 30px 1px #999;
   border: 0;
   transition: box-shadow .8s;

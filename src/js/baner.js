@@ -97,5 +97,4 @@ $(function () {
    }
    let oBaner = new Baner()
 
-   let sss = $(".li_cen .img_k  ")
 })

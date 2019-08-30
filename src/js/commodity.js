@@ -93,6 +93,33 @@ $(function () {
         next()
     })
 
+    // ___________________________________________________________生成列表
+    $.ajax({
+        type: "get",
+        url: "./api/derive.php",
+        dataType: "json",
+        success: function (response) {
+            let html = response.data.map((ele) => {
+                return `<div class="mian_commit_box"  id=${ele.cID}>
+                <div class="mian_commit_box_img">
+                    <img src=${ele.src}
+                        alt="">
+                </div>
+                <div class="mian_commit_tiem">
+                    <span class="mian_commit-text">${ele.insor}</span>
+                    <span class="mian_commit-are">${ele.Angell}</span>
+                </div>
+                <div class="mian_commit_bott">
+                    <h2>${ele.collect}</h2>
+                    <p><i></i>收藏品牌 </p>
+                </div>
+            </div>`
+
+            }).join("")
+
+            $(".mian_commit_list").html(html)
+        }
+    });
 
 
 
