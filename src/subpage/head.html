@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>头部</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>
@@ -21,10 +23,10 @@
                     <li class="li_box">
                         <span>QQ登录</span>
                     </li>
-                    <li class="li_box">
+                    <li class="li_box  switchover ">
                         <!-- 导入页面后 -->
-                        <a href="http://127.0.0.1/avten/src/subpage/lgoin.html">登录</a>
-                        <a href="http://127.0.0.1/avten/src/subpage/register.html">免费注册</a>
+                            <a href="http://127.0.0.1/avten/src/subpage/lgoin.html">登录</a>
+                            <a href="http://127.0.0.1/avten/src/subpage/register.html">免费注册</a>
                     </li>
                     <li class="li_box ">
                         <span>我的订单</span>
@@ -32,7 +34,7 @@
                     <li class="li_box">
                         <i><img src="//status.tuanimg.com/statics/zhe/common/img/head_cart.png" width="18"
                                 height="16"></i>
-                        <span>购物车<em class="mycat">0</em></span>
+                        <span class="maycart">购物车</span>
                     </li>
                 </ul>
             </div>
@@ -56,7 +58,7 @@
             <div class="head_lgog">
                 <div id="logo">
                     <a href="">
-                        <img src="./img/login_logo.jpg" alt="">
+                        <img src="//status.tuanimg.com/statics/zhe/common/img/logo_zhe800_new.png" alt="">
                     </a>
                 </div>
                 <div class="search">
@@ -107,6 +109,9 @@
             </div>
         </div>
     </header>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/headfoot.js"></script>
 </body>
 
 </html>

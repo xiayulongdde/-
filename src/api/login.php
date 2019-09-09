@@ -7,7 +7,7 @@
     $pass=isset($_REQUEST['logpaw'])?$_REQUEST['logpaw']:"";
     #sqlyuju
     $sql = "SELECT * FROM `user` WHERE phone=$uram AND password=$pass";
-echo  $sql;
+
      #得到数字集合
      $res=mysqli_query($conn,$sql);
      if($res){

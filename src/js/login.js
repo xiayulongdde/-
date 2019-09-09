@@ -43,7 +43,8 @@ $(function () {
     empty(oMane)
 
     $(".login-butt").click(function () {
-        Cookie.setItem('name', urmeval, 3)
+
+
         if (urmeval.length != 0 && oPassval.length != 0) {
             $.ajax({
                 type: "post",
@@ -51,15 +52,27 @@ $(function () {
                 data: `logaman=${urmeval}&logpaw=${oPassval}`,
                 success: function (response) {
                     if (response != "no") {
-                        var obj = {
-                            type: "layer-rollIn",
-                            title: "温馨提示",
-                            content: `<div>登录成功2秒后进入首页`,
-                        };
-                        method.msg_layer(obj);
-                        setTimeout(() => {
-                            window.open("http://127.0.0.1/avten/src/home.html")
-                        }, 2000);
+                        let oldname = Cookie.getItem("name")
+                        if (oldname) {
+                            var obj = {
+                                type: "layer-rollIn",
+                                title: "温馨提示",
+                                content: `<div>您已登录`,
+                            };
+                            method.msg_layer(obj)
+                        } else {
+                            Cookie.setItem('name', urmeval, 3)
+                            var obj = {
+                                type: "layer-rollIn",
+                                title: "温馨提示",
+                                content: `<div>登录成功2秒后进入首页`,
+                            };
+                            method.msg_layer(obj);
+                            setTimeout(() => {
+                                window.open("http://127.0.0.1/avten/src/home.html")
+                            }, 2000);
+
+                        }
                     } else {
                         var obj = {
                             type: "layer-rollIn",

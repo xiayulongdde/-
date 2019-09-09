@@ -11,10 +11,4 @@ $data=array("status"=>"sucess","msg"=>"请求成功","data"=>mysqli_fetch_all($r
 echo json_encode($data,true);
 
 
-
-
-
-
-
-
 ?>

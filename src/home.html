@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="./css/foot.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/page.css">
     <script src="./js/jquery-1.11.3.min.js"></script>
-    <script src="./js/home.js"></script>
-    <script src="./js/baner.js"></script>
-    <script src="./js/commodity.js"></script>
+
 </head>
 
 <body>
@@ -25,7 +24,9 @@
         </script>
     </header>
     <!-- 吸顶效果 -->
-    <div></div>
+    <div id="mian">
+
+    </div>
     <!-- 侧面变栏 -->
     <div id="The_side_bar">
         <script>
@@ -143,7 +144,7 @@
                     <span class="therephotograph_span">【香莉思】&nbsp;全场1件4折</span>
                 </li>
                 <li class="therephotograph_img">
-                    <a href="">
+                    <a href="http://127.0.0.1/avten/src/subpage/list.html">
                         <img src="./img/nav01.jpg" alt="">
                     </a>
                     <span class="therephotograph_span">【才子男装】&nbsp;全场1件4折</span>
@@ -256,6 +257,11 @@
     <div class="mian_commit">
         <div class="mian_commit_list winp">
         </div>
+        <!--底部分页 -->
+        <div style="text-align: center;margin:0 auto;">
+            <div id="pager" class="pager clearfix">
+            </div>
+        </div>
     </div>
     <!-- 底部 -->
     <footer id="footer">
@@ -263,6 +269,13 @@
             $("#footer").load("./subpage/foot.html");
         </script>
     </footer>
+    <script src="./js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/baner.js"></script>
+    <script src="./js/commodity.js"></script>
+    <script>
+        let con = $(".con")
+    </script>
 </body>
 
 </html>

@@ -3,11 +3,7 @@
 include 'conn.php';
 
 $json=file_get_contents("comt.json");
-// var_dump($json);
-
 $data=json_decode($json,true);
-
-
 for($i=0;$i<count($data);$i++){
     $src=$data[$i]["src"];
     $insor=$data[$i]["insor"];

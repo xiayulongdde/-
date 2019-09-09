@@ -1,0 +1,23 @@
+#wrap {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#wrap select {
+	width: 100px;
+	height: 30px;
+	border: 1px solid #2d2d2d;
+	font: 14px/30px "微软雅黑";
+	border-radius: 5px;
+}
+
+#wrap input {
+	/*width:100px;*/
+	height: 30px;
+	border: 1px solid #2d2d2d;
+	font: 14px/28px "微软雅黑";
+	border-radius: 5px;
+	vertical-align: bottom;
+	background: #000;
+	color: #fff;
+}

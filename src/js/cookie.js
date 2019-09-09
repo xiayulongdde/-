@@ -12,7 +12,7 @@ let Cookie = {
         if (day) {
             let date = new Date();
             date.setDate(date.getDate() + day);
-            document.cookie = key + "=" + value + ";expires=" + date;
+            document.cookie = key + "=" + value + ";path=/";
         } else {
             document.cookie = key + "=" + value;
         }

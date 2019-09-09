@@ -13,6 +13,7 @@ $(function () {
       }
       init() {
          this.creatsapn()
+         this.cookie()
       }
 
       creatsapn() {
@@ -93,6 +94,18 @@ $(function () {
             }
          });
 
+      }
+
+
+      cookie() {
+
+         //如果页面有Coookie时
+         let oLgin = $(".switchover")
+         let name = Cookie.getItem("name")
+         if (name) {
+            let oQuit = name + `欢迎来到折800 <a href="###">退出</a> `
+            oLgin.html(oQuit)
+         }
       }
    }
    let oBaner = new Baner()

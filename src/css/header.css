@@ -59,7 +59,7 @@ body {
 }
 
 .top_box .top_list .top_cont {
-  width: 402px;
+  width: 365px;
   height: 29px;
   background: #f5f5f5;
   float: right;
@@ -70,6 +70,7 @@ body {
 }
 
 .top_box .top_list .top_cont .top_cont_list {
+  width: 800px;
   padding: 6px 0 4px 0;
   box-sizing: border-box;
 }

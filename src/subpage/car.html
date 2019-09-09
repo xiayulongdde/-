@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/car/index.css">
+    <link rel="stylesheet" href="../css/car/car.css">
+
+</head>
+
+<body>
+    <div id="top">
+        <div class="top_list winp">
+            <div class="help">帮助中心</div>
+            <div class="login" id="login">
+                <ul class="login_list">
+                    <em></em>
+                    <li class="login_li">
+                        <a href="###" class="maycar">购物车
+
+
+                        </a>
+                    </li>
+                    <em></em>
+                    <li class="login_li">
+                        <a href="">我的订单</a>
+                    </li>
+                    <em></em>
+                    <li class="login_li detrusion">
+                        <!-- <a href="http://127.0.0.1/avten/src/subpage/lgoin.html">登录</a>
+                        <a href="http://127.0.0.1/avten/src/subpage/register.html">免费注册</a> -->
+                    </li>
+                    <em></em>
+                    <li class="login_li">
+                        <a href="">QQ登录</a>
+                    </li>
+                    <em></em>
+                </ul>
+            </div>
+            <span class="website ">团八百旗下网站</span>
+        </div>
+    </div>
+    <header id="head">
+        <div class="head_body winp">
+            <div id="lgog">
+                <a href="http://127.0.0.1/avten/src/home.html">
+                    <img src="//i4.tuanimg.com/shop/asset/d/icon/logo20172x.png" alt="图标">
+                </a>
+            </div>
+            <div class="process"></div>
+        </div>
+    </header>
+    <div class="car_tilet">
+        <div class="car_tilet_text winp">
+            <div class="service"></div>
+            <p class="carnum">
+                购物车
+                <span class="count">
+                    <!-- <i id="item-count">1</i> -->
+                </span>
+            </p>
+            <span class="reminder">
+                现在 <a href="http://127.0.0.1/avten/src/subpage/lgoin.html">[登录]</a>，您购物车中的商品将永久保存
+            </span>
+        </div>
+    </div>
+    <main id="main">
+        <div class="main_tab winp">
+            <div class="main_tab_tilte">
+                <p class="all">
+                    <i class="checkbox" data-behavior="checkbox" data-toggle="cart-select-all" data-checked="off">
+                        <input type="checkbox" class="top_check_all">
+                    </i>
+                    <span>
+                        <a href="#" data-toggle="cart-select-all">全选</a>
+                    </span>
+                    <p class="products">商品</p>
+                </p>
+                <p class="price">单价(元)</p>
+                <p class="number">数量</p>
+                <p class="money">金额(元)</p>
+                <p class="operation">操作</p>
+            </div>
+        </div>
+        <!-- 数据生成出 -->
+        <div class="item winp">
+            <!-- <table cellpadding="0" cellspacing="0" class="gwc_tb2">
+                <tr class="car_king">
+                    <td class="tb2_td1">
+                        <input type="checkbox" value="1" name="newslist" id="newslist" class="newslist" />
+                    </td>
+                    <td class="tb2_td2">
+                        <a href="#"><img
+                                src="//z2.tuanimg.com/imagev2/trade/800x800.861719544a977ebdb6579938738ffa0c.100x100.jpg" />
+                        </a>
+                    </td>
+                    <td class="tb2_td3">
+                        <a href="#">吉普盾休闲短袖T恤翻领POLO衫时尚新款男夏季新款男士T恤</a>
+                    </td>
+                    <td class="unit_price">
+                        <div class="price_box">
+                            <span class="iprice">
+                                390.00
+                            </span>
+                            <span class="lpiice">
+                                599.00
+                            </span>
+                        </div>
+                    </td>
+                    <td class="quantity">
+                        <input id="min1" class="min1" style=" width:20px; height:18px;border:1px solid #ccc;"
+                            type="button" value="-" />
+                        <input id="text_box1" class="text_box1" data-mun="8" type="text" value="1"
+                            style=" width:30px; text-align:center; border:1px solid #ccc;" />
+
+                        <input id="add1" class="add1" style=" width:20px; height:18px;border:1px solid #ccc;"
+                            type="button" value="+" />
+                        <span class="stock"></span>
+                    </td>
+
+                    <td class="car_money">
+                        <span class=" total_prices">11.9</span>
+                    </td>
+                    <td class="romeve">
+                        <a href="###">删除</a>
+                    </td>
+                </tr>
+            </table> -->
+
+        </div>
+        <!-- 商品结算 -->
+        <div class="account  winp">
+            <table cellpadding="0" cellspacing="0" class="settle">
+                <tr id="house">
+                    <td class="deltree">
+                        <p class="all">
+                            <i class="checkbox" data-behavior="checkbox" data-toggle="cart-select-all"
+                                data-checked="off">
+                                <input type="checkbox" class="bott_check_all">
+                            </i>
+                            <span>
+                                <a href="#" data-toggle="cart-select-all">全选</a>
+                            </span>
+
+                        </p>
+                    </td>
+                    <td class="tb1_td1">
+                        <a href="###" class="wholesale">
+                            批量删除
+                        </a>
+                    </td>
+                    <td class="tb3_td1">&nbsp;</td>
+                    <td class="tb3_td2">已选商品
+                        <label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label> 件</td>
+                    <td class="tb3_td3">合计(不含运费):<span class="CNY">￥</span><span style=" color:#ff5500;"><label
+                                id="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></span></td>
+                    <td class="tb3_td4">
+                        <span id="jz1">结算</span>
+                        <a href="#" style=" display:none;" class="jz2" id="jz2">结算
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/car/jqAlert2.js"></script>
+    <script src="../js/car/car.js"></script>
+
+</body>
+
+</html>

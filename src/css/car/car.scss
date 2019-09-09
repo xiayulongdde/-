@@ -1,0 +1,268 @@
+html,
+body {
+    height: 100%;
+}
+
+.winp {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#top {
+    width: 100%;
+    background: #fafafa;
+    color: #999;
+    position: relative;
+    z-index: 10001;
+    font-family: '\5FAE\8F6F\96C5\9ED1';
+    padding: 0;
+
+    .top_list {
+        height: 30px;
+        line-height: 30px;
+        background: #fafafa;
+
+        .help {
+            float: right;
+            font-size: 12px;
+            line-height: 30px;
+            margin-left: 3px;
+        }
+
+        .login {
+            width: 344px;
+            height: 30px;
+            background: #fafafa;
+            float: right;
+
+            .login_list {
+                width: 431px;
+                height: 100%;
+                margin-left: -88px;
+
+                .login_li {
+                    float: right;
+                    font-size: 12px;
+                    padding: 0px 12px;
+
+                    a {
+                        color: #999;
+
+                    }
+
+                    .maycar {
+
+                        .item-coun {
+                            color: #f20000;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                em {
+                    width: 1px;
+                    height: 13px;
+                    float: right;
+                    background: #555;
+                    margin: 8px 0 0px
+                }
+            }
+        }
+
+        .website {
+
+            font-size: 12px;
+            position: absolute;
+            left: 45%;
+
+        }
+    }
+}
+
+#head {
+    width: 100%;
+    background: #fafafa;
+
+    .head_body {
+        height: 95px;
+        background: #fafafa;
+        overflow: hidden;
+        padding: 30px;
+        box-sizing: border-box;
+
+        #lgog {
+            float: left;
+
+            a {
+                img {
+                    width: 218px;
+                    height: 45px;
+                }
+            }
+        }
+
+        .process {
+            float: right;
+            background: url(//i4.tuanimg.com/cart/asset/d/step.ff09f3d1.png) 0 0 no-repeat;
+            width: 296px;
+            height: 18px;
+            margin-top: 8px;
+        }
+    }
+}
+
+.car_tilet {
+    width: 100%;
+    background: #fafafa;
+    border-bottom: 3px solid #f20000;
+
+    .car_tilet_text {
+        height: 54px;
+        background: #fafafa;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .service {
+            width: 486px;
+            height: 28px;
+            float: right;
+            background: url(//i4.tuanimg.com/cart/asset/d/new_icon1.7d56c951.png) no-repeat;
+        }
+
+        .carnum {
+            font: 18px/26px "微软雅黑";
+            margin-right: 20px;
+            color: #333;
+            float: left;
+
+            .count {
+                margin-left: 4px;
+                font-family: Arial;
+                font-weight: 700;
+
+                #item-count {
+                    color: #f20000 !important;
+                }
+            }
+        }
+
+        .reminder {
+            float: left;
+            font-size: 12px;
+            margin-top: 7px;
+
+            a {
+                color: #428bca;
+            }
+
+        }
+    }
+}
+
+#main {
+    width: 100%;
+
+    .main_tab {
+        // height: 145px;
+        background: #ffff;
+
+        .main_tab_tilte {
+            height: 44px;
+            background: #fff;
+            padding-top: 10px;
+            box-sizing: border-box;
+
+            P {
+                font-weight: 700;
+                float: left;
+                text-align: center;
+                color: #333;
+                font-size: 12px;
+            }
+
+            .all {
+                position: relative;
+                text-align: center;
+
+                .checkbox {
+                    width: 13px;
+                    padding-left: 16px;
+
+                    input {
+                        border: 1px solid #ccc;
+                    }
+                }
+
+                span {
+                    a {
+                        color: #333;
+                    }
+                }
+
+            }
+
+            .products {
+                padding: 0;
+                text-indent: 150px;
+                width: 444px;
+                text-align: left
+            }
+
+
+            .price {
+                width: 170px;
+                padding-left: 16px;
+                text-align: left;
+            }
+
+            .number {
+                width: 50px;
+            }
+
+            .money {
+                width: 155px;
+                text-align: right;
+            }
+
+            .operation {
+                width: 47px;
+                margin-left: 30px;
+            }
+
+
+        }
+
+    }
+
+    .item {
+        padding-bottom: 30px;
+
+        .car_boby {
+            width: 980px;
+            background: #58bc58;
+
+            .car_item {
+                width: 100%;
+
+                .particularswbe {
+                    height: 112px;
+                    background: #58bc58;
+                    border: 1px solid #f2f2f2;
+
+                    .cd {
+                        width: 38px;
+                        height: 112px;
+                        padding: 15px 0;
+                        border-collapse: collapse;
+                        vertical-align: top;
+                        margin-left: 30px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+}

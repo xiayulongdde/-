@@ -1,0 +1,421 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.winp {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#main {
+  height: 653px;
+  background: #efefef;
+  font-size: 12px;
+}
+
+#main .perties {
+  height: 38px;
+  line-height: 38px;
+  text-align: left;
+  font-family: "\5B8B\4F53";
+  background: #ffff;
+}
+
+#main .perties a {
+  color: #000;
+}
+
+#main .main_img {
+  vertical-align: middle;
+  width: 539px;
+  height: 612px;
+  background: #fff;
+  float: left;
+}
+
+#main .main_img #magnifier1 {
+  float: left;
+}
+
+#main .main_img .panelC {
+  margin-top: 20px;
+}
+
+#main .main_img .panelC div {
+  float: left;
+  margin-right: 20px;
+  line-height: 16px;
+  padding-bottom: 6px;
+}
+
+#main .main_img .panelC div a {
+  color: #000;
+}
+
+#main .main_presentation {
+  width: 550px;
+  height: 612px;
+  text-align: left;
+  margin-left: 30px;
+  float: left;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#main .main_presentation .main_presentation_tile {
+  font: 700 16px/24px "\5FAE\8F6F\96C5\9ED1";
+  color: #333;
+  margin: -3px 0 1px 0;
+  position: relative;
+  background: #ffff;
+}
+
+#main .main_presentation .converge {
+  margin-top: 10px;
+  background: #fff6eb;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 119px;
+  color: #ec1813;
+}
+
+#main .main_presentation .converge .converge_price {
+  width: 100%;
+  height: 35px;
+}
+
+#main .main_presentation .converge .converge_price .price_amend {
+  width: 100%;
+  float: left;
+}
+
+#main .main_presentation .converge .converge_price .price_amend .lprice {
+  color: #ec1611;
+  font: 700 16px/30px "\5FAE\8F6F\96C5\9ED1";
+  display: inline-block;
+}
+
+#main .main_presentation .converge .converge_price .price_amend .lprice .ilprice {
+  font-size: 26px;
+  margin-left: 3px;
+}
+
+#main .main_presentation .converge .converge_price .price_amend .js_org_price {
+  color: #555;
+}
+
+#main .main_presentation .converge .converge_price .discount {
+  width: 11px;
+  height: 16px;
+  background: url(//i4.tuanimg.com/shop/asset/item_d/p_Spirit1-3.95484520.png) no-repeat -89px -284px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+#main .main_presentation .converge .converge_price .js_top_phone_buy .js_tit {
+  color: #555;
+  line-height: 40px;
+}
+
+#main .main_presentation .converge .converge_price .js_top_phone_buy .CR_code {
+  position: absolute;
+  position: relative;
+  display: none;
+}
+
+#main .main_presentation .converge .converge_price .js_top_phone_buy .CR_code img {
+  position: absolute;
+  left: 157px;
+  top: 14px;
+  border: 1px solid #e4e4e4;
+  border-bottom: 0;
+  padding: 4px;
+  background: #fff;
+  z-index: 3;
+}
+
+#main .main_presentation .converge .converge_price .js_top_phone_buy .CR_code .js_tishi {
+  width: 143px;
+  color: #555;
+  position: absolute;
+  left: 157px;
+  top: 155px;
+  background: #ccc;
+  text-align: center;
+}
+
+#main .main_presentation .converge .converge_price .js_top_phone_buy:hover .CR_code {
+  display: block;
+}
+
+#main .main_presentation .converge .integral {
+  width: 100%;
+  height: 16px;
+  position: relative;
+}
+
+#main .main_presentation .converge .integral .integral_tile {
+  width: 44px;
+  height: 16px;
+  float: left;
+  display: inline-block;
+  background: #ff8a00;
+  border-radius: 3px;
+  line-height: 17px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+
+#main .main_presentation .converge .integral .integral_body {
+  position: absolute;
+  top: -4px;
+  left: 67px;
+  z-index: 0;
+}
+
+#main .main_presentation .converge .integral .discounts {
+  background: #fe7393;
+}
+
+#main .main_presentation dl {
+  margin-top: 13px;
+  width: 100%;
+  float: left;
+  margin-bottom: 4px;
+  font-family: "\5B8B\4F53";
+  line-height: 26px;
+}
+
+#main .main_presentation dl .freight {
+  width: 46px;
+  height: 18px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  padding-right: 3px;
+  background: url(//i4.tuanimg.com/shop/asset/item_d/products/new1.ccb9914b.png) no-repeat 0 0;
+  margin: 3px 8px 0 0;
+  float: left;
+  margin-right: 25px;
+}
+
+#main .main_presentation dl dd {
+  float: left;
+}
+
+#main .main_presentation dl dd address {
+  float: left;
+}
+
+#main .main_presentation dl dd p .icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin: 6px 5px 0 0;
+  background: #ec1813;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 17px;
+}
+
+#main .main_presentation dl dd p .decrease {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  float: left;
+  font-size: 26px;
+  line-height: 33px;
+}
+
+#main .main_presentation dl dd p input {
+  float: left;
+  font-family: arial;
+  width: 38px;
+  height: 23px;
+  background: #fff;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+#main .main_presentation dl dd p .increase {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 26px;
+  line-height: 33px;
+}
+
+#main .main_presentation dl dd li {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #ccc;
+  float: left;
+  background: #fff;
+  margin: 0 6px 6px 0;
+  overflow: hidden;
+}
+
+#main .main_presentation dl dd li a {
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 31px;
+  background: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+#main .main_presentation dl dd ul .sule {
+  width: 33px;
+  height: 24px;
+  border: 1px solid #ccc;
+  float: left;
+  margin: 0 6px 6px 0;
+  overflow: hidden;
+  font-family: arial;
+  text-align: center;
+}
+
+#main .main_presentation dl dd ul .sule a {
+  color: #000;
+  font-size: 12px;
+  height: 24px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 24px;
+}
+
+#main .main_presentation dl dd ul .avton {
+  border: 1px solid #C00;
+}
+
+#main .shopping {
+  margin-top: 13px;
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 55px;
+  background: #ffff;
+  text-align: center;
+}
+
+#main .shopping .purchase {
+  width: 160px;
+  height: 55px;
+  background: #fff;
+  color: #C00;
+  float: left;
+  line-height: 55px;
+  font-size: 18px;
+  margin: 0 20px;
+  border: 1px solid #C00;
+}
+
+#main .shopping .shopping_car {
+  width: 160px;
+  height: 55px;
+  background: #ec1813;
+  color: #fff;
+  float: left;
+  line-height: 55px;
+  font-size: 18px;
+}
+
+.prompts {
+  width: 100%;
+  height: 1000px;
+  background: rgba(0, 0, 0, 0.301);
+  position: fixed;
+  top: 0;
+}
+
+.prompts .prompts_text {
+  width: 500px;
+  height: 183px;
+  background: #C00;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.prompts .prompts_text .reminder {
+  font: 14px/20px "\5FAE\8F6F\96C5\9ED1";
+  color: #fff;
+  padding: 15px 0 15px 30px;
+  border-bottom: 1px solid #d1d1d1;
+  background: #c7000b;
+}
+
+.prompts .prompts_text .close {
+  display: block;
+  background: url(//i4.tuanimg.com/shop/asset/item_d/login_dialog_icons.16768cf0.png) no-repeat -176px -11px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+
+.prompts .skipcar {
+  padding: 25px 0;
+  text-align: center;
+  width: 100%;
+  height: 81px;
+  background: #fff;
+}
+
+.prompts .skipcar .skipcar_list {
+  height: 36px;
+  width: 100%;
+  background: #ffff;
+}
+
+.prompts .skipcar .skipcar_list .skipcar_li {
+  margin: 0 10px 0 0;
+  background: #fff;
+  text-align: center;
+  display: inline-block;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  background: #dc0000;
+  border: 1px solid #dc0000;
+  font-size: 15px;
+}
+
+.prompts .skipcar .skipcar_list .skipcar_li a {
+  color: #fff;
+}
+
+.prompts .skipcar .skipcar_list .skipcar_li_last {
+  margin: 0 10px 0 0;
+  background: #fff;
+  text-align: center;
+  display: inline-block;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.addcl {
+  display: none;
+}

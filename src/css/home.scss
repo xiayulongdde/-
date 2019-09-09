@@ -878,7 +878,7 @@ body {
 
     .mian_commit_list {
         background: #f2f2f2;
-        height: 8627px;
+        height: 100%;
 
         .mian_commit_box {
             float: left;
@@ -963,6 +963,12 @@ body {
             border: 0;
             transition: box-shadow .8s;
         }
+
+        .Paging {
+            width: 100%;
+            text-align: center;
+        }
+
 
 
     }
